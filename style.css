@@ -22,6 +22,9 @@ body {
 	width: 100vw;
 	display: grid;
 	place-items: center;
+	position: fixed;
+	top: 0;
+	z-index: -1;
 }
 #header .name {
 	font-size: 8rem;
@@ -39,6 +42,7 @@ body {
 	line-height: 2em;
 	font-size: 200%;
 	color: #000;
+	margin-top: 90vh;
 }
 #content p.open::first-letter {
 	line-height: 1em;
