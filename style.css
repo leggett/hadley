@@ -129,15 +129,14 @@ a.title {
   width: 100vw;
   min-height: 600px;
   background: top / cover no-repeat url("sunset.jpg");
-  margin-top: 75px;
+  margin-top: 125px;
 }
 
 #footer .quote {
   background: rgb(245, 245, 245);
   background: linear-gradient(
     180deg,
-    rgba(245, 245, 245, 1) 0%,
-    rgba(245, 245, 245, 1) 50%,
+    var(--color-accent) 50%,
     rgba(245, 245, 245, 0) 100%
   );
   width: 100vw;
