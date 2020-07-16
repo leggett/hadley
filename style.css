@@ -1,0 +1,236 @@
+:root {
+  --color-accent: #fca;
+  --font-serif: "Times New Roman", Georgia, serif;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  background-color: var(--color-accent);
+}
+
+#header {
+  background-color: var(--color-accent);
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+#header .name {
+  font-size: 8rem;
+}
+
+#content {
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
+  border: 0px;
+  width: 680px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10vh 10%;
+  line-height: 2em;
+  font-size: 200%;
+  color: #000;
+}
+#content p.open::first-letter {
+  line-height: 1em;
+  letter-spacing: normal;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  float: left;
+  margin-bottom: -0.3em;
+  padding: 0 0.05em 0 0;
+}
+a,
+a:visited {
+  color: #007; /* #36c; */
+  text-decoration: none;
+  border: none;
+}
+a.title {
+  font-style: italic;
+  white-space: nowrap;
+}
+a[target="_new"],
+a[target="_new"]:visited {
+  color: #007;
+}
+b {
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 900;
+  font-size: 80%;
+  text-transform: uppercase;
+  background-color: #fca;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+span.name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 220%;
+  font-weight: 900;
+}
+span.byline {
+  opacity: 0.5;
+}
+b {
+  font-weight: 700;
+}
+em {
+  font-weight: 400;
+  font-size: 90%;
+  font-style: normal;
+}
+a img {
+  margin-bottom: 20px;
+  border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
+  animation: image 30s linear infinite;
+}
+@keyframes image {
+  0% {
+    border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
+  }
+  25% {
+    border-radius: 31% 69% 69% 31% / 32% 68% 32% 68%;
+  }
+  60% {
+    border-radius: 31% 69% 22% 78% / 81% 68% 32% 19%;
+  }
+  100% {
+    border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
+  }
+}
+#content p {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+#moreLinks {
+  display: none;
+}
+#moreButton {
+  cursor: pointer;
+}
+#footer {
+  position: absolute;
+  left: 0px;
+  width: 100vw;
+  min-height: 600px;
+  background: top / cover no-repeat url("sunset.jpg");
+  margin-top: 75px;
+}
+#footer::before {
+  content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
+  font-size: 24px;
+  opacity: 0.4;
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  left: calc(50vw - 50px);
+  top: -140px;
+}
+#content p {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+#moreLinks {
+  display: none;
+}
+#moreButton {
+  cursor: pointer;
+}
+#footer {
+  position: absolute;
+  left: 0px;
+  width: 100vw;
+  min-height: 600px;
+  background: top / cover no-repeat url("sunset.jpg");
+  margin-top: 75px;
+}
+#footer::before {
+  content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
+  font-size: 24px;
+  opacity: 0.4;
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  left: calc(50vw - 50px);
+  top: -140px;
+}
+
+#footer .quote {
+  background: rgb(245, 245, 245);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(245, 245, 245, 1) 50%,
+    rgba(245, 245, 245, 0) 100%
+  );
+  width: 100vw;
+  min-height: 200px;
+}
+#footer .quote p {
+  font-family: "Dancing Script", cursive;
+  width: 680px;
+  margin: -50px auto 0 auto;
+  font-size: 42px;
+}
+#footer .quote p span {
+  float: right;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+/* Mobile design */
+@media screen and (max-device-width: 420px) {
+  #content {
+    margin: 0;
+    padding: 4vh;
+    font-size: 4em;
+    width: calc(100% - 8vh);
+    line-height: 200%;
+  }
+  a img {
+    zoom: 200%;
+  }
+
+  #footer {
+    margin-top: 150px;
+  }
+  #footer::before {
+    top: -200px;
+  }
+  #footer .quote {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(245, 245, 245, 1) 50%,
+      rgba(245, 245, 245, 0) 100%
+    );
+  }
+  #footer .quote p {
+    padding: 4vh;
+    font-size: 6em;
+    width: calc(100% - 8vh);
+    line-height: 170%;
+    margin: -140px auto 0 auto;
+  }
+  #footer .quote p span {
+    font-size: 40%;
+  }
+}
