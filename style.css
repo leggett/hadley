@@ -85,6 +85,7 @@ a.title {
 	line-height: 2em;
 	color: #000;
 	text-align: left;
+	margin-top: 90vh;
 }
 #content p {
 	text-align: justify;
