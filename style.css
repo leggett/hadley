@@ -237,3 +237,11 @@ a img {
 		font-size: 40%;
 	}
 }
+
+#watermark {
+	color: #00000075;
+	z-index: 1;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
