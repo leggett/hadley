@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Hadley Leggett | Writer, reader, mother of three.</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
-      rel="stylesheet"
-    />
+	<head>
+		<title>Hadley Leggett | Writer, reader, mother of three.</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+			rel="stylesheet"
+		/>
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="mask-icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="mask-icon" type="image/svg+xml" href="favicon.svg" />
 
-    <style type="text/css">
-      html,
-      body {
-        font-family: "Times New Roman", Georgia, serif;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0px;
-        width: 100%;
-        height: 100%;
-        font-size: 12px;
-        background-color: #f5f5f5;
-      }
-      body {
-        border-top: 10px solid #fca; /* #8fc648; */
-      }
-      #page {
-        border: 0px;
-        width: 680px;
-        margin: 0 auto;
-        text-align: left;
-        padding: 10vh 10%;
-        line-height: 2em;
-        font-size: 200%;
-        color: #000;
-      }
-      /*
+		<style type="text/css">
+			html,
+			body {
+				font-family: "Times New Roman", Georgia, serif;
+				font-weight: 400;
+				font-style: normal;
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+				font-size: 12px;
+				background-color: #f5f5f5;
+			}
+			body {
+				border-top: 10px solid #fca; /* #8fc648; */
+			}
+			#page {
+				border: 0px;
+				width: 680px;
+				margin: 0 auto;
+				text-align: left;
+				padding: 10vh 10%;
+				line-height: 2em;
+				font-size: 200%;
+				color: #000;
+			}
+			/*
       #page p:first-of-type {
         line-height: 1em;
         letter-spacing: normal;
@@ -61,259 +61,275 @@
         padding: 0 0.3em 0 0;
       }
       */
-      a,
-      a:visited {
-        color: #007; /* #36c; */
-        text-decoration: none;
-        border: none;
-      }
-      a.title {
-        font-style: italic;
-        white-space: nowrap;
-      }
-      a[target="_new"],
-      a[target="_new"]:visited {
-        color: #007;
-      }
-      b {
-        font-family: "Times New Roman", Georgia, serif;
-        font-weight: 900;
-        font-size: 80%;
-        text-transform: uppercase;
-        background-color: #fca;
-        padding: 8px 12px;
-        border-radius: 4px;
-      }
-      span.name {
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 220%;
-        font-weight: 900;
-      }
-      span.byline {
-        opacity: 0.5;
-      }
-      b {
-        font-weight: 700;
-      }
-      em {
-        font-weight: 400;
-        font-size: 90%;
-        font-style: normal;
-      }
-      a img {
-        margin-bottom: 20px;
-        /*
+			a,
+			a:visited {
+				color: #007; /* #36c; */
+				text-decoration: none;
+				border: none;
+			}
+			a.title {
+				font-style: italic;
+				white-space: nowrap;
+			}
+			a[target="_new"],
+			a[target="_new"]:visited {
+				color: #007;
+			}
+			b {
+				font-family: "Times New Roman", Georgia, serif;
+				font-weight: 900;
+				font-size: 80%;
+				text-transform: uppercase;
+				background-color: #fca;
+				padding: 8px 12px;
+				border-radius: 4px;
+			}
+			span.name {
+				font-family: "Playfair Display", Georgia, serif;
+				font-size: 220%;
+				font-weight: 900;
+			}
+			span.byline {
+				opacity: 0.5;
+			}
+			b {
+				font-weight: 700;
+			}
+			em {
+				font-weight: 400;
+				font-size: 90%;
+				font-style: normal;
+			}
+			a img {
+				margin-bottom: 20px;
+				/*
         clip-path: circle(100px at center);
         border-radius: 30% 70% 57% 43% / 30% 39% 61% 70%;
         */
-        border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
-      }
-      #page p {
-        text-align: left;
-        margin-top: 0;
-        margin-bottom: 2em;
-      }
-      #moreLinks {
-        display: none;
-      }
-      #moreButton {
-        cursor: pointer;
-      }
-      #footer {
-        position: absolute;
-        left: 0px;
-        width: 100vw;
-        min-height: 600px;
-        background: top / cover no-repeat url("sunset.jpg");
-        margin-top: 75px;
-      }
-      #footer::before {
-        content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
-        font-size: 24px;
-        opacity: 0.4;
-        position: absolute;
-        width: 100px;
-        text-align: center;
-        margin: 0 auto;
-        left: calc(50vw - 50px);
-        top: -140px;
-      }
+				animation: image 12s linear infinite;
+			}
 
-      #footer .quote {
-        background: rgb(245, 245, 245);
-        background: linear-gradient(
-          180deg,
-          rgba(245, 245, 245, 1) 0%,
-          rgba(245, 245, 245, 1) 50%,
-          rgba(245, 245, 245, 0) 100%
-        );
-        width: 100vw;
-        min-height: 200px;
-      }
-      #footer .quote p {
-        font-family: "Dancing Script", cursive;
-        width: 680px;
-        margin: -50px auto 0 auto;
-        font-size: 42px;
-      }
-      #footer .quote p span {
-        float: right;
-        font-size: 14px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        text-transform: uppercase;
-        line-height: 1em;
-      }
+			@keyframes image {
+				0% {
+					border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
+				}
+				25% {
+					border-radius: 31% 69% 69% 31% / 32% 68% 32% 68%;
+				}
+				60% {
+					border-radius: 31% 69% 22% 78% / 81% 68% 32% 19%;
+				}
+				100% {
+					border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
+				}
+			}
 
-      /* Mobile design */
-      @media screen and (max-device-width: 420px) {
-        #page {
-          margin: 0;
-          padding: 4vh;
-          font-size: 4em;
-          width: calc(100% - 8vh);
-          line-height: 200%;
-        }
-        a img {
-          zoom: 200%;
-        }
+			#page p {
+				text-align: left;
+				margin-top: 0;
+				margin-bottom: 2em;
+			}
+			#moreLinks {
+				display: none;
+			}
+			#moreButton {
+				cursor: pointer;
+			}
+			#footer {
+				position: absolute;
+				left: 0px;
+				width: 100vw;
+				min-height: 600px;
+				background: top / cover no-repeat url("sunset.jpg");
+				margin-top: 75px;
+			}
+			#footer::before {
+				content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
+				font-size: 24px;
+				opacity: 0.4;
+				position: absolute;
+				width: 100px;
+				text-align: center;
+				margin: 0 auto;
+				left: calc(50vw - 50px);
+				top: -140px;
+			}
 
-        #footer {
-          margin-top: 150px;
-        }
-        #footer::before {
-          top: -200px;
-        }
-        #footer .quote {
-          background: linear-gradient(
-            180deg,
-            rgba(245, 245, 245, 1) 0%,
-            rgba(245, 245, 245, 1) 50%,
-            rgba(245, 245, 245, 0) 100%
-          );
-        }
-        #footer .quote p {
-          padding: 4vh;
-          font-size: 6em;
-          width: calc(100% - 8vh);
-          line-height: 170%;
-          margin: -140px auto 0 auto;
-        }
-        #footer .quote p span {
-          font-size: 40%;
-        }
-      }
-    </style>
-  </head>
+			#footer .quote {
+				background: rgb(245, 245, 245);
+				background: linear-gradient(
+					180deg,
+					rgba(245, 245, 245, 1) 0%,
+					rgba(245, 245, 245, 1) 50%,
+					rgba(245, 245, 245, 0) 100%
+				);
+				width: 100vw;
+				min-height: 200px;
+			}
+			#footer .quote p {
+				font-family: "Dancing Script", cursive;
+				width: 680px;
+				margin: -50px auto 0 auto;
+				font-size: 42px;
+			}
+			#footer .quote p span {
+				float: right;
+				font-size: 14px;
+				font-family: Georgia, "Times New Roman", Times, serif;
+				text-transform: uppercase;
+				line-height: 1em;
+			}
 
-  <body>
-    <div id="page">
-      <a href="hadley_leggett.jpg"
-        ><img src="hadley_leggett.jpg" width="200" height="200" /></a
-      ><br />
+			/* Mobile design */
+			@media screen and (max-device-width: 420px) {
+				#page {
+					margin: 0;
+					padding: 4vh;
+					font-size: 4em;
+					width: calc(100% - 8vh);
+					line-height: 200%;
+				}
+				a img {
+					zoom: 200%;
+				}
 
-      <!-- <span class="name">HADLEY LEGGETT</span><br> -->
-      <span class="name">Hadley Leggett</span><br />
-      <span class="byline">Writer, reader, mother of three.</span><br /><br />
+				#footer {
+					margin-top: 150px;
+				}
+				#footer::before {
+					top: -200px;
+				}
+				#footer .quote {
+					background: linear-gradient(
+						180deg,
+						rgba(245, 245, 245, 1) 0%,
+						rgba(245, 245, 245, 1) 50%,
+						rgba(245, 245, 245, 0) 100%
+					);
+				}
+				#footer .quote p {
+					padding: 4vh;
+					font-size: 6em;
+					width: calc(100% - 8vh);
+					line-height: 170%;
+					margin: -140px auto 0 auto;
+				}
+				#footer .quote p span {
+					font-size: 40%;
+				}
+			}
+		</style>
+	</head>
 
-      <b>Writer</b>
-      <p>
-        My recent work has been published in
-        <a
-          href="http://www.literarymama.com/creativenonfiction/archives/2019/09/all-clear.html"
-          class="title"
-          >Literary Mama</a
-        >,
-        <a href="https://fiftywordstories.com/tag/hadley-leggett/" class="title"
-          >50-Word Stories</a
-        >, and
-        <a
-          href="https://halfwaydownthestairs.net/2020/03/01/i-wont-by-hadley-leggett/"
-          class="title"
-          >Halfway Down the Stairs</a
-        >, and you can find my science writing at
-        <a href="https://www.wired.com/author/hadley-leggett/" class="title"
-          >WIRED.com</a
-        >. In February 2020, I was selected for the AWP Writer-to-Writer
-        mentorship program.
-      </p>
-      <p>
-        My first novel manuscript, <em>A BETTER MOTHER</em>, was chosen for
-        Round 7 of
-        <a href="https://authormentormatch.com">Author Mentor Match</a>. It
-        tells the story of a struggling widow who loses her daughters to foster
-        care and will do anything to get them back. More than a custody battle,
-        it’s a story of loss and redemption, and finding help in unexpected
-        places.
-      </p>
+	<body>
+		<div id="page">
+			<a href="hadley_leggett.jpg"
+				><img src="hadley_leggett.jpg" width="200" height="200" /></a
+			><br />
 
-      <b>Reader</b>
-      <p>
-        I firmly believe you can’t be a writer without being a reader first. I
-        try to read at least one novel per week, and I’m a subscriber of way too
-        many lit mags. I’m also a fiction reader for
-        <a href="http://longleafreview.com/masthead/" class="title"
-          >Longleaf Review</a
-        >.
-      </p>
+			<!-- <span class="name">HADLEY LEGGETT</span><br> -->
+			<span class="name">Hadley Leggett</span><br />
+			<span class="byline">Writer, reader, mother of three.</span><br /><br />
 
-      <b>Mother of three</b>
-      <p>
-        Mothering breaks me down and builds me up in ways I never expected, and
-        my role as a mom is integral to my life as a writer. I wrote the rough
-        draft of my novel in three-hour chunks, while my youngest daughter was
-        in preschool, and these days I squeeze in revisions between packing
-        lunches and folding laundry. But my kids keep me sane through the
-        inevitable stream of rejections and disappointments in my writing life.
-        And whenever I start to take myself too seriously, I go build a Lego
-        castle.
-      </p>
+			<b>Writer</b>
+			<p>
+				My recent work has been published in
+				<a
+					href="http://www.literarymama.com/creativenonfiction/archives/2019/09/all-clear.html"
+					class="title"
+					>Literary Mama</a
+				>,
+				<a href="https://fiftywordstories.com/tag/hadley-leggett/" class="title"
+					>50-Word Stories</a
+				>, and
+				<a
+					href="https://halfwaydownthestairs.net/2020/03/01/i-wont-by-hadley-leggett/"
+					class="title"
+					>Halfway Down the Stairs</a
+				>, and you can find my science writing at
+				<a href="https://www.wired.com/author/hadley-leggett/" class="title"
+					>WIRED.com</a
+				>. In February 2020, I was selected for the AWP Writer-to-Writer
+				mentorship program.
+			</p>
+			<p>
+				My first novel manuscript, <em>A BETTER MOTHER</em>, was chosen for
+				Round 7 of
+				<a href="https://authormentormatch.com">Author Mentor Match</a>. It
+				tells the story of a struggling widow who loses her daughters to foster
+				care and will do anything to get them back. More than a custody battle,
+				it’s a story of loss and redemption, and finding help in unexpected
+				places.
+			</p>
 
-      <b>My winding path</b>
-      <p>
-        I should have realized I wasn’t cut out to be a doctor on my first day
-        in anatomy lab, when I sat down on a wooden crate and discovered my seat
-        was filled with hemisected human heads. I nearly passed out—on that day,
-        and also about 37 more times throughout my illustrious medical career.
-        But I persevered through four miserable years, only to graduate still
-        dreaming of becoming a writer.
-      </p>
-      <p>
-        I'd fallen in love with storytelling as a child, but as a people-pleaser
-        born into a family of scientists, it never occured to me I could become
-        a writer. That would be like aspiring to be a Hollywood actress, or a
-        mermaid-unicorn-fairy princess. So I dutifully earned my bachelor’s
-        degree in biochemistry and went to medical school, like any good
-        literature-lover would do.
-      </p>
-      <p>
-        After leaving medicine, it took me ten more years—and another graduate
-        program, this time in science journalism—to learn to trust myself and my
-        writing dreams. In May 2018, I enrolled in my first fiction class at
-        Hugo House. I’d finally found my home.
-      </p>
+			<b>Reader</b>
+			<p>
+				I firmly believe you can’t be a writer without being a reader first. I
+				try to read at least one novel per week, and I’m a subscriber of way too
+				many lit mags. I’m also a fiction reader for
+				<a href="http://longleafreview.com/masthead/" class="title"
+					>Longleaf Review</a
+				>.
+			</p>
 
-      <b>Contact me</b>
-      <p>
-        Please reach out and say
-        <a href="mailto:hi@hadley.ink" target="_new">hi@hadley.ink</a>, or on
-        Twitter <a href="http://twitter.com/hadl" target="_new">@hadl</a>. I’d
-        love nothing more than to connect with other emerging writers, and
-        especially other writer-parents! Writing can be a long and lonely road,
-        and without the community I’ve gained through organizations like Hugo
-        House, Pen Parentis, and Writerly Love, I never would have made it this
-        far. For a bulleted list of my career U-turns, you can find me on
-        <a href="https://www.linkedin.com/in/hadleyleggett/" target="_new"
-          >LinkedIn</a
-        >.
-      </p>
-    </div>
-    <div id="footer">
-      <div class="quote">
-        <p>
-          Pay&nbsp;attention. Be&nbsp;astonished. Tell&nbsp;about&nbsp;it.<br />
-          <span>—MARY OLIVER</span>
-        </p>
-      </div>
-    </div>
-  </body>
+			<b>Mother of three</b>
+			<p>
+				Mothering breaks me down and builds me up in ways I never expected, and
+				my role as a mom is integral to my life as a writer. I wrote the rough
+				draft of my novel in three-hour chunks, while my youngest daughter was
+				in preschool, and these days I squeeze in revisions between packing
+				lunches and folding laundry. But my kids keep me sane through the
+				inevitable stream of rejections and disappointments in my writing life.
+				And whenever I start to take myself too seriously, I go build a Lego
+				castle.
+			</p>
+
+			<b>My winding path</b>
+			<p>
+				I should have realized I wasn’t cut out to be a doctor on my first day
+				in anatomy lab, when I sat down on a wooden crate and discovered my seat
+				was filled with hemisected human heads. I nearly passed out—on that day,
+				and also about 37 more times throughout my illustrious medical career.
+				But I persevered through four miserable years, only to graduate still
+				dreaming of becoming a writer.
+			</p>
+			<p>
+				I'd fallen in love with storytelling as a child, but as a people-pleaser
+				born into a family of scientists, it never occured to me I could become
+				a writer. That would be like aspiring to be a Hollywood actress, or a
+				mermaid-unicorn-fairy princess. So I dutifully earned my bachelor’s
+				degree in biochemistry and went to medical school, like any good
+				literature-lover would do.
+			</p>
+			<p>
+				After leaving medicine, it took me ten more years—and another graduate
+				program, this time in science journalism—to learn to trust myself and my
+				writing dreams. In May 2018, I enrolled in my first fiction class at
+				Hugo House. I’d finally found my home.
+			</p>
+
+			<b>Contact me</b>
+			<p>
+				Please reach out and say
+				<a href="mailto:hi@hadley.ink" target="_new">hi@hadley.ink</a>, or on
+				Twitter <a href="http://twitter.com/hadl" target="_new">@hadl</a>. I’d
+				love nothing more than to connect with other emerging writers, and
+				especially other writer-parents! Writing can be a long and lonely road,
+				and without the community I’ve gained through organizations like Hugo
+				House, Pen Parentis, and Writerly Love, I never would have made it this
+				far. For a bulleted list of my career U-turns, you can find me on
+				<a href="https://www.linkedin.com/in/hadleyleggett/" target="_new"
+					>LinkedIn</a
+				>.
+			</p>
+		</div>
+		<div id="footer">
+			<div class="quote">
+				<p>
+					Pay&nbsp;attention. Be&nbsp;astonished. Tell&nbsp;about&nbsp;it.<br />
+					<span>—MARY OLIVER</span>
+				</p>
+			</div>
+		</div>
+	</body>
 </html>
