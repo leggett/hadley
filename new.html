@@ -159,18 +159,17 @@
         line-height: 1em;
       }
 
-      /* Extra small devices (portrait phones, less than 576px) */
-      @media only screen and (max-width: 799.98px) {
+      /* Mobile design */
+      @media screen and (max-device-width: 420px) {
         #page {
           margin: 0;
           padding: 4vh;
-          /* zoom: 125%; */
-          font-size: 300%;
+          font-size: 4em;
           width: calc(100% - 8vh);
-          line-height: 170%;
+          line-height: 200%;
         }
         a img {
-          zoom: 110%;
+          zoom: 200%;
         }
 
         #footer {
@@ -183,17 +182,19 @@
           background: linear-gradient(
             180deg,
             rgba(245, 245, 245, 1) 0%,
-            rgba(245, 245, 245, 1) 80%,
+            rgba(245, 245, 245, 1) 50%,
             rgba(245, 245, 245, 0) 100%
           );
         }
         #footer .quote p {
           padding: 4vh;
-          font-size: 36px;
-          zoom: 125%;
+          font-size: 6em;
           width: calc(100% - 8vh);
           line-height: 170%;
           margin: -140px auto 0 auto;
+        }
+        #footer .quote p span {
+          font-size: 40%;
         }
       }
     </style>
