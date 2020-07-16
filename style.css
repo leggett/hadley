@@ -1,5 +1,7 @@
 :root {
   --color-accent: #fca;
+  --color-links: #007;
+  --color-links-underline: rgba(0, 0, 120, 0.2);
   --font-serif: "Times New Roman", Georgia, serif;
   font-size: 62.5%;
 }
@@ -16,6 +18,16 @@ body {
   background-color: var(--color-accent);
 }
 
+a,
+a:visited {
+  color: var(--color-links);
+  text-decoration: none;
+}
+a.title {
+  font-style: italic;
+  white-space: nowrap;
+}
+
 #header {
   background-color: var(--color-accent);
   height: 90vh;
@@ -23,75 +35,22 @@ body {
   display: grid;
   place-items: center;
 }
+#header div {
+  text-align: center;
+}
 #header .name {
-  font-size: 8rem;
-}
-
-#content {
-  border-radius: 3px;
-  background-color: #f5f5f5;
-  box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
-  border: 0px;
-  width: 680px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 10vh 10%;
-  line-height: 2em;
-  font-size: 200%;
-  color: #000;
-}
-#content p.open::first-letter {
-  line-height: 1em;
-  letter-spacing: normal;
-  font-family: "Times New Roman", Georgia, serif;
-  font-size: 60px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  float: left;
-  margin-bottom: -0.3em;
-  padding: 0 0.05em 0 0;
-}
-a,
-a:visited {
-  color: #007; /* #36c; */
-  text-decoration: none;
-  border: none;
-}
-a.title {
-  font-style: italic;
-  white-space: nowrap;
-}
-a[target="_new"],
-a[target="_new"]:visited {
-  color: #007;
-}
-b {
-  font-family: "Times New Roman", Georgia, serif;
-  font-weight: 900;
-  font-size: 80%;
-  text-transform: uppercase;
-  background-color: #fca;
-  padding: 8px 12px;
-  border-radius: 4px;
-}
-span.name {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 220%;
-  font-weight: 900;
-}
-span.byline {
-  opacity: 0.5;
-}
-b {
+  font-size: 7rem;
   font-weight: 700;
+  margin-bottom: 20px;
 }
-em {
-  font-weight: 400;
-  font-size: 90%;
-  font-style: normal;
+#header .byline {
+  font-size: 3rem;
 }
-a img {
+#header a[href^="#"] {
+  border-bottom: 2px solid var(--color-links-underline);
+}
+#header a img {
   margin-bottom: 20px;
   border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
   animation: image 30s linear infinite;
@@ -110,17 +69,52 @@ a img {
     border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
   }
 }
+
+#content {
+  background-color: #f5f5f5;
+  box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
+  border-radius: 3px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 14vh 10%;
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  line-height: 2em;
+  color: #000;
+  text-align: left;
+}
+#content p.open::first-letter {
+  line-height: 1em;
+  letter-spacing: normal;
+  font-size: 16rem;
+  float: left;
+  margin-top: -0.05em;
+  margin-bottom: -0.3em;
+  padding: 0 0.1em 0 0;
+}
+
+#content > b {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #fca;
+  padding: 4px 16px;
+  border-radius: 4px;
+  margin: 2em 0 0.5em 0;
+}
+#content em {
+  font-weight: 400;
+  font-size: 90%;
+  font-style: normal;
+}
+
 #content p {
   text-align: left;
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 4rem;
 }
-#moreLinks {
-  display: none;
-}
-#moreButton {
-  cursor: pointer;
-}
+
 #footer {
   position: absolute;
   left: 0px;
@@ -129,28 +123,6 @@ a img {
   background: top / cover no-repeat url("sunset.jpg");
   margin-top: 75px;
 }
-#footer::before {
-  content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
-  font-size: 24px;
-  opacity: 0.4;
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  margin: 0 auto;
-  left: calc(50vw - 50px);
-  top: -140px;
-}
-#content p {
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 2em;
-}
-#moreLinks {
-  display: none;
-}
-#moreButton {
-  cursor: pointer;
-}
 #footer {
   position: absolute;
   left: 0px;
@@ -158,17 +130,6 @@ a img {
   min-height: 600px;
   background: top / cover no-repeat url("sunset.jpg");
   margin-top: 75px;
-}
-#footer::before {
-  content: "*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
-  font-size: 24px;
-  opacity: 0.4;
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  margin: 0 auto;
-  left: calc(50vw - 50px);
-  top: -140px;
 }
 
 #footer .quote {
@@ -196,8 +157,10 @@ a img {
   line-height: 1em;
 }
 
-/* Mobile design */
 @media screen and (max-device-width: 420px) {
+  #header a img {
+    zoom: 200%;
+  }
   #content {
     margin: 0;
     padding: 4vh;
@@ -205,15 +168,8 @@ a img {
     width: calc(100% - 8vh);
     line-height: 200%;
   }
-  a img {
-    zoom: 200%;
-  }
-
   #footer {
     margin-top: 150px;
-  }
-  #footer::before {
-    top: -200px;
   }
   #footer .quote {
     background: linear-gradient(
