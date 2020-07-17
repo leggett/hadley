@@ -23,6 +23,10 @@ a:visited {
 }
 a.title {
   font-style: italic;
+  border-bottom: 5px solid rgba(0, 0, 120, 0.2);
+}
+a[target] {
+  border-bottom: 5px solid rgba(0, 0, 120, 0.1);
 }
 
 /* HEADER */
