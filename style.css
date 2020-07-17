@@ -7,7 +7,7 @@
 }
 html,
 body {
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: var(--font-serif);
   font-weight: 400;
   font-style: normal;
   margin: 0px;
@@ -181,7 +181,7 @@ html.scrolled #content .p {
 #footer .quote {
   background: linear-gradient(
     180deg,
-    var(--color-accent) 50%,
+    var(--color-accent) 60%,
     rgba(245, 245, 245, 0) 100%
   );
   width: 100vw;
