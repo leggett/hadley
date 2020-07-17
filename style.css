@@ -25,7 +25,7 @@ a.title {
   font-style: italic;
   border-bottom: 5px solid rgba(0, 0, 120, 0.2);
 }
-a[target] {
+a[target]:not(.button) {
   border-bottom: 5px solid rgba(0, 0, 120, 0.1);
 }
 
