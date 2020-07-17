@@ -220,14 +220,22 @@ html.scrolled #content .p {
   float: none;
   display: block;
 }
+html.scrolled #contact {
+  opacity: 0.3;
+}
+html.scrolled #contact:hover {
+  opacity: 1;
+}
 #contact a.button svg:hover {
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
-html.scrolled #contact {
-  opacity: 0;
-}
 
+@media screen and (max-width: 1200px) {
+  html.scrolled #contact {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 1000px) {
   #content {
     padding: 120px 10%;
