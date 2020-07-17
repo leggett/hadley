@@ -61,6 +61,10 @@ a.title {
   border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
   animation: image 30s linear infinite;
 }
+#header a:focus,
+#header a img:focus {
+  outline: none;
+}
 @keyframes image {
   0% {
     border-radius: 66% 34% 57% 43% / 38% 55% 45% 62%;
@@ -93,12 +97,12 @@ a.title {
 html.showPage #content {
   margin-top: 90vh;
 }
-#content p {
+#content .p {
   text-align: justify;
   margin-top: 0;
   margin-bottom: 4rem;
 }
-#content p.open::first-letter {
+#content .p.open::first-letter {
   line-height: 1em;
   letter-spacing: normal;
   font-size: 16rem;
@@ -146,13 +150,13 @@ html.showPage #content {
   width: 100vw;
   min-height: 200px;
 }
-#footer .quote p {
+#footer .quote .p {
   font-family: "Dancing Script", cursive;
   width: 680px;
   margin: -50px auto 0 auto;
   font-size: 42px;
 }
-#footer .quote p span {
+#footer .quote .p span {
   float: right;
   font-size: 14px;
   font-family: var(--font-serif);
@@ -165,6 +169,7 @@ html.showPage #content {
   display: block;
   bottom: 24px;
   right: 24px;
+  transition: opacity 300ms;
 }
 #contact a.button svg {
   padding: 16px;
@@ -174,10 +179,15 @@ html.showPage #content {
   margin: 18px 9px;
   opacity: 0.1;
   transition: opacity 200ms ease, background-color 200ms ease;
+  float: none;
+  display: block;
 }
 #contact a.button svg:hover {
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
+}
+html.scrolled #contact {
+  opacity: 0;
 }
 
 @media screen and (max-device-width: 420px) {
@@ -205,10 +215,6 @@ html.showPage #content {
     height: 96px !important;
     margin: 0 24px !important;
   }
-  html.scrolled #contact {
-    opacity: 0;
-    transition: opacity 300ms;
-  }
 
   #content {
     padding: 6vh;
@@ -223,14 +229,14 @@ html.showPage #content {
   #footer .quote {
     margin-top: -150px !important;
   }
-  #footer .quote p {
+  #footer .quote .p {
     padding: 4vh 4vh 10vh 4vh;
     font-size: 3em;
     width: calc(100% - 8vh);
     line-height: 170%;
     margin: -300px auto 0 auto;
   }
-  #footer .quote p span {
+  #footer .quote .p span {
     font-size: 40%;
   }
 }
