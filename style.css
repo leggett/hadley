@@ -41,14 +41,17 @@ a.title {
 #header div {
   text-align: center;
 }
-#header .name {
+#header h1 {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 7rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  line-height: 1em;
 }
-#header .byline {
+#header h3 {
   font-size: 3rem;
+  font-weight: 400;
+  line-height: 1em;
 }
 #header a[href^="#"] {
   border-bottom: 2px solid var(--color-links-underline);
@@ -135,7 +138,6 @@ html.showPage #content {
 }
 
 #footer .quote {
-  background: rgb(245, 245, 245);
   background: linear-gradient(
     180deg,
     var(--color-accent) 50%,
@@ -182,33 +184,51 @@ html.showPage #content {
   :root {
     font-size: 110%;
   }
+  #header {
+    height: 70vh;
+  }
   #header a img {
     zoom: 200%;
   }
+
+  #contact {
+    position: absolute;
+    top: 65vh;
+    left: calc(50vw - 148px);
+    z-index: 0;
+  }
+  #contact a {
+    float: left;
+  }
+  #contact svg {
+    width: 96px !important;
+    height: 96px !important;
+    margin: 0 24px !important;
+  }
+  html.scrolled #contact {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
   #content {
     padding: 6vh;
-    margin: 95vh 0 0 0;
+    margin: 85vh 0 0 0;
     width: 100vw;
     max-width: 100vw;
     box-sizing: border-box;
   }
   #footer {
-    margin-top: 150px;
+    margin-top: 350px;
   }
   #footer .quote {
-    background: linear-gradient(
-      180deg,
-      rgba(245, 245, 245, 1) 0%,
-      rgba(245, 245, 245, 1) 50%,
-      rgba(245, 245, 245, 0) 100%
-    );
+    margin-top: -150px !important;
   }
   #footer .quote p {
-    padding: 4vh;
-    font-size: 6em;
+    padding: 4vh 4vh 10vh 4vh;
+    font-size: 3em;
     width: calc(100% - 8vh);
     line-height: 170%;
-    margin: -140px auto 0 auto;
+    margin: -300px auto 0 auto;
   }
   #footer .quote p span {
     font-size: 40%;
