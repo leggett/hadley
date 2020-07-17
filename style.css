@@ -122,6 +122,7 @@ html.scrolled #content::before {
   text-align: justify;
   margin-top: 0;
   margin-bottom: 4rem;
+  transition: opacity 300ms;
 }
 html.scrolled #content .p {
   opacity: 1;
