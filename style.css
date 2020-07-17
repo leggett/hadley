@@ -44,8 +44,8 @@ a[target]:not(.button) {
   text-align: center;
 }
 #header h1 {
-  font-family: var(--font-serif); /* "Playfair Display", Georgia, serif; */
-  font-size: 8rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 10rem;
   font-weight: 400;
   letter-spacing: -0.03em;
   margin: 0 0 20px 0;
@@ -118,9 +118,13 @@ html.scrolled #content::before {
   opacity: 0;
 }
 #content .p {
+  opacity: 0;
   text-align: justify;
   margin-top: 0;
   margin-bottom: 4rem;
+}
+html.scrolled #content .p {
+  opacity: 1;
 }
 #content .p.open::first-letter {
   line-height: 1em;
@@ -133,13 +137,23 @@ html.scrolled #content::before {
 }
 #content > b {
   display: inline-block;
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 4rem;
+
+  /*
   text-transform: uppercase;
   background-color: #fca;
   padding: 4px 16px;
   border-radius: 4px;
   margin: 0 0 0.5em 0;
+  */
+  padding: 0 10px;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.8;
+  font-weight: 400;
+  border-bottom: 15px solid var(--color-accent);
+  margin-bottom: 0.5em;
+  height: 3.4rem;
 }
 #content > a[name] {
   display: block;
@@ -255,6 +269,16 @@ html.scrolled #contact {
     z-index: 3;
     opacity: 0.2;
     transition: opacity 300ms;
+  }
+  #content > b {
+    /*
+    font-size: 3rem;
+    padding: 0.2rem 2rem;
+    border-radius: 16px;
+    */
+    height: 4.5rem;
+    font-size: 5rem;
+    border-bottom: 30px solid var(--color-accent);
   }
 
   /* FOOTER */
