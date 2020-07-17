@@ -89,24 +89,29 @@ a[target]:not(.button) {
   box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
   border-radius: 3px;
   max-width: 680px;
-  margin: 95vh auto 0 auto;
+  margin: 92vh auto 0 auto;
   padding: 14vh 10%;
   font-family: var(--font-serif);
   font-size: 2.4rem;
   line-height: 2em;
   color: #000;
   text-align: left;
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+html.scrolled #content {
+  opacity: 1;
 }
 #content::before {
   content: "";
   position: absolute;
   left: calc(50vw - 12px);
-  margin-top: -14vh;
+  margin-top: -12vh;
   width: 48px;
   height: 48px;
   background: center / cover no-repeat url("img/up.svg");
   z-index: 3;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: opacity 300ms;
 }
 html.scrolled #content::before {
@@ -192,7 +197,7 @@ html.scrolled #content::before {
   height: 36px;
   border-radius: 48px;
   margin: 18px 9px;
-  opacity: 0.1;
+  opacity: 0.15;
   transition: opacity 200ms ease, background-color 200ms ease;
   float: none;
   display: block;
