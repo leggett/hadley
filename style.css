@@ -92,7 +92,7 @@ a[target]:not(.button) {
   box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
   border-radius: 3px;
   max-width: 900px;
-  margin: 92vh auto 0 auto;
+  margin: calc(100vh - 75px) auto 0 auto;
   padding: 120px 180px;
   box-sizing: border-box;
   font-family: var(--font-serif);
@@ -242,7 +242,7 @@ html.scrolled #contact {
 
   /* HEADER */
   #header {
-    height: calc(var(--app-height) - 8vh);
+    height: var(--app-height);
     padding-bottom: 5em;
     box-sizing: border-box;
   }
@@ -252,9 +252,9 @@ html.scrolled #contact {
 
   /* CONTENT */
   #content {
-    padding: 6vh;
+    padding: 100px;
     margin: 0;
-    margin-top: calc(var(--app-height) - 8vh);
+    margin-top: calc(var(--app-height) - 150px);
     width: 100vw;
     max-width: 100vw;
     box-sizing: border-box;
@@ -273,7 +273,7 @@ html.scrolled #contact {
   }
   #content::before {
     left: calc(50vw - 48px);
-    margin-top: -5vh;
+    margin-top: -70px;
     width: 96px;
     height: 96px;
     z-index: 3;
@@ -299,9 +299,9 @@ html.scrolled #contact {
     margin-top: -150px !important;
   }
   #footer .quote .p {
-    padding: 4vh 4vh 10vh 4vh;
+    padding: 70px 70px 140px 70px;
     font-size: 3em;
-    width: calc(100% - 8vh);
+    width: calc(100% - 140px);
     line-height: 170%;
     margin: -300px auto 0 auto;
   }
@@ -313,7 +313,7 @@ html.scrolled #contact {
   #contact {
     position: absolute;
     top: 70vh;
-    left: calc(50vw - 148px);
+    left: calc(50vw - 176px);
     z-index: 0;
   }
   #contact a {
