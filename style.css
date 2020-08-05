@@ -93,11 +93,11 @@ a[target]:not(.button) {
   border-radius: 3px;
   max-width: 900px;
   margin: calc(100vh - 75px) auto 0 auto;
-  padding: 120px 180px;
+  padding: 100px 150px 75px 150px;
   box-sizing: border-box;
   font-family: var(--font-serif);
-  font-size: 2.4rem;
-  line-height: 2em;
+  font-size: 2.2rem;
+  line-height: 1.8em;
   color: #000;
   text-align: left;
   opacity: 0.5;
@@ -110,7 +110,7 @@ html.scrolled #content {
   content: "";
   position: absolute;
   left: calc(50vw - 12px);
-  margin-top: -110px;
+  margin-top: -85px;
   width: 48px;
   height: 48px;
   background: center / cover no-repeat url("img/up.svg");
@@ -123,7 +123,7 @@ html.scrolled #content::before {
 }
 #content .p {
   opacity: 0;
-  text-align: justify;
+  text-align: left;
   margin-top: 0;
   margin-bottom: 4rem;
   transition: opacity 300ms;
@@ -134,7 +134,7 @@ html.scrolled #content .p {
 #content .p.open::first-letter {
   line-height: 1em;
   letter-spacing: normal;
-  font-size: 16rem;
+  font-size: 13rem;
   float: left;
   margin-top: -0.05em;
   margin-bottom: -0.3em;
