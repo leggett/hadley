@@ -236,15 +236,12 @@ html.scrolled #contact:hover {
     opacity: 0;
   }
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1000px) {
   #content {
     padding: 100px 10%;
     margin: calc(100vh - 150px) auto 0 auto;
     font-size: 2.4rem;
     line-height: 1.8em;
-  }
-  #content::before {
-    margin-top: -40px;
   }
   #content .p.open::first-letter {
     font-size: 10rem;
