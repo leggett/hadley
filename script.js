@@ -31,11 +31,7 @@ const appHeight = (event) => {
     `${window.innerHeight}px`
   );
   document.querySelector("#appHeight").innerText =
-    window.innerHeight +
-    " / " +
-    touchDevice +
-    " / " +
-    (event?.type === "resize");
+    window.innerHeight + " / " + touchDevice + " / " + event?.type;
 };
 
 window.addEventListener("resize", appHeight);
