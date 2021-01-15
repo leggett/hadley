@@ -14,10 +14,16 @@ window.onload = () => {
   }
 };
 
-const appHeight = () =>
-  document.documentElement.style.setProperty(
-    "--app-height",
-    `${window.innerHeight}px`
-  );
+const touchDevice = "ontouchstart" in document.documentElement;
+
+const appHeight = (firstTime = false) => {
+  if (firstTime || !touchDevice) {
+    document.documentElement.style.setProperty(
+      "--app-height",
+      `${window.innerHeight}px`
+    );
+  }
+};
+
 window.addEventListener("resize", appHeight);
-appHeight();
+appHeight(true);
