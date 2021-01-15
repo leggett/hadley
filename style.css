@@ -3,6 +3,7 @@
   --color-links: #007;
   --color-links-underline: rgba(0, 0, 120, 0.2);
   --font-serif: "Times New Roman", Georgia, serif;
+  --app-height: 100vh;
   font-size: 62.5%;
 }
 html,
@@ -35,7 +36,7 @@ a[target]:not(.button) {
 /* HEADER */
 #header {
   background-color: var(--color-accent);
-  height: 100vh;
+  height: var(--app-height);
   width: 100vw;
   display: grid;
   place-items: center;
@@ -92,7 +93,7 @@ a[target]:not(.button) {
   box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
   border-radius: 3px;
   max-width: 900px;
-  margin: calc(100vh - 75px) auto 0 auto;
+  margin: calc(var(--app-height) - 75px) auto 0 auto;
   padding: 100px 150px 75px 150px;
   box-sizing: border-box;
   font-family: var(--font-serif);
@@ -239,7 +240,7 @@ html.scrolled #contact:hover {
 @media screen and (max-width: 1000px) {
   #content {
     padding: 100px 10%;
-    margin: calc(100vh - 150px) auto 0 auto;
+    margin: calc(var(--app-height) - 150px) auto 0 auto;
     font-size: 2.4rem;
     line-height: 1.8em;
   }
@@ -326,7 +327,7 @@ html.scrolled #contact:hover {
   /* CONTACT FORM */
   #contact {
     position: absolute;
-    top: 70vh;
+    top: calc(0.7 * var(--app-height));
     left: calc(50vw - 176px);
     z-index: 0;
   }
