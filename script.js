@@ -25,5 +25,5 @@ const appHeight = (firstTime = false) => {
   }
 };
 
-window.addEventListener("resize", appHeight);
+// window.addEventListener("resize", appHeight);
 appHeight(true);
