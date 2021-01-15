@@ -7,12 +7,6 @@ window.onscroll = () => {
   } else {
     document.documentElement.classList.remove("scrolled");
   }
-
-  // if (window.scrollY > 1000) {
-  //   header.style.display = "none";
-  // } else {
-  //   header.style.display = "grid";
-  // }
 };
 
 window.onload = () => {
@@ -30,8 +24,6 @@ const appHeight = (event) => {
     "--app-height",
     `${window.innerHeight}px`
   );
-  document.querySelector("#appHeight").innerText =
-    window.innerHeight + " / " + touchDevice + " / " + event?.type;
 };
 
 window.addEventListener("resize", appHeight);
