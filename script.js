@@ -30,7 +30,7 @@ const appHeight = (firstTime = false) => {
       `${window.innerHeight}px`
     );
     document.querySelector("#appHeight").innerText =
-      window.innerHeight + " / " + touchDevice;
+      window.innerHeight + " / " + touchDevice + " / " + firstTime;
   }
 };
 
