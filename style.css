@@ -59,10 +59,19 @@ html.new #header {
   margin: 0 0 20px 0;
   line-height: 1em;
 }
+html.new.C #header h1 {
+  font-size: 8rem;
+}
 #header h3 {
   font-size: 3rem;
   font-weight: 400;
   line-height: 1em;
+}
+html.new.C #header h3 {
+  font-size: 2.5rem;
+}
+html.new.C #header h3 b {
+  color: var(--color-accent);
 }
 #header a[href^="#"] {
   border-bottom: 2px solid var(--color-links-underline);
