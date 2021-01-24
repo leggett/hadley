@@ -34,7 +34,7 @@ a[target]:not(.button) {
 }
 
 /* HEADER */
-#header {
+html:not(.new) #header {
   background-color: var(--color-accent);
   height: var(--app-height);
   width: 100vw;
@@ -44,6 +44,10 @@ a[target]:not(.button) {
   top: 0;
   z-index: -1;
 }
+html.new #header {
+  margin-bottom: 100px;
+}
+
 #header div {
   text-align: center;
 }
@@ -91,7 +95,7 @@ a[target]:not(.button) {
 #content {
   background-color: #f5f5f5;
   box-shadow: 0 10px 50px rgba(34, 35, 36, 0.15);
-  border-radius: 3px;
+  border-radius: 4px;
   max-width: 900px;
   margin: calc(var(--app-height) - 75px) auto 0 auto;
   padding: 100px 150px 75px 150px;
@@ -107,7 +111,11 @@ a[target]:not(.button) {
 html.scrolled #content {
   opacity: 0.99; /* Safari bugs out if it is 1 */
 }
-#content::before {
+html.new #content {
+  opacity: 1;
+  margin-top: 100px;
+}
+html:not(.new) #content::before {
   content: "";
   position: absolute;
   left: calc(50vw - 12px);
@@ -128,6 +136,9 @@ html.scrolled #content::before {
   margin-top: 0;
   margin-bottom: 4rem;
   transition: opacity 300ms;
+}
+html.new #content .p {
+  opacity: 1;
 }
 html.scrolled #content .p {
   opacity: 1;
