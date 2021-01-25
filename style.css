@@ -59,7 +59,7 @@ html.new #header {
   margin: 0 0 20px 0;
   line-height: 1em;
 }
-html.new.C #header h1 {
+html.new #header h1 {
   font-size: 8rem;
 }
 #header h3 {
@@ -230,6 +230,13 @@ html.scrolled #content .p {
   right: 24px;
   transition: opacity 300ms;
 }
+html.new #contact {
+  position: relative;
+  height: 144px;
+  width: fit-content;
+  min-width: 350px;
+  margin: 60px auto 0;
+}
 #contact a.button svg {
   padding: 16px;
   width: 36px;
@@ -362,7 +369,7 @@ html.scrolled #contact:hover {
   }
 
   /* CONTACT FORM */
-  #contact {
+  html:not(.new) #contact {
     position: absolute;
     top: calc(0.7 * var(--app-height));
     left: calc(50vw - 176px);
