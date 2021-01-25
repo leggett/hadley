@@ -289,8 +289,10 @@ html.scrolled #contact:hover {
     box-sizing: border-box;
   }
   html.new #header {
-    padding-bottom: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
     box-sizing: border-box;
+    background-color: var(--color-accent);
   }
   #header a img {
     zoom: 200%;
@@ -314,7 +316,7 @@ html.scrolled #contact:hover {
   html.new #content {
     opacity: 1 !important;
     margin-top: 0px;
-    padding-top: 250px;
+    padding-top: 100px;
     background-color: #fff;
   }
   #content .p {
