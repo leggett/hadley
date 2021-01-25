@@ -59,7 +59,7 @@ html.new #header {
   margin: 0 0 20px 0;
   line-height: 1em;
 }
-html.new #header h1 {
+html.new.C #header h1 {
   font-size: 8rem;
 }
 #header h3 {
@@ -283,13 +283,9 @@ html.scrolled #contact:hover {
   }
 
   /* HEADER */
-  html:not(.new) #header {
+  #header {
     height: var(--app-height);
     padding-bottom: 5em;
-    box-sizing: border-box;
-  }
-  html.new #header {
-    padding-bottom: 3em;
     box-sizing: border-box;
   }
   #header a img {
@@ -311,19 +307,13 @@ html.scrolled #contact:hover {
   html.scrolled #content {
     opacity: 0.99; /* Safari bugs out if it is 1 */
   }
-  html.new #content {
-    opacity: 1 !important;
-    margin-top: 0px;
-    padding-top: 250px;
-    background-color: #fff;
-  }
   #content .p {
     text-align: left !important;
   }
   #content .p.open::first-letter {
     font-size: 20rem;
   }
-  html:not(.new) #content::before {
+  #content::before {
     left: calc(50vw - 48px);
     margin-top: -70px;
     width: 96px;
@@ -362,18 +352,11 @@ html.scrolled #contact:hover {
   }
 
   /* CONTACT FORM */
-  html:not(.new) #contact {
+  #contact {
     position: absolute;
     top: calc(0.7 * var(--app-height));
     left: calc(50vw - 176px);
     z-index: 0;
-  }
-  html.new #contact {
-    position: relative;
-    height: 144px;
-    width: fit-content;
-    min-width: 350px;
-    margin: 60px auto 0;
   }
   #contact a {
     float: left;
