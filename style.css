@@ -230,13 +230,6 @@ html.scrolled #content .p {
   right: 24px;
   transition: opacity 300ms;
 }
-html.new #contact {
-  position: relative;
-  height: 144px;
-  width: fit-content;
-  min-width: 350px;
-  margin: 60px auto 0;
-}
 #contact a.button svg {
   padding: 16px;
   width: 36px;
@@ -374,6 +367,13 @@ html.scrolled #contact:hover {
     top: calc(0.7 * var(--app-height));
     left: calc(50vw - 176px);
     z-index: 0;
+  }
+  html.new #contact {
+    position: relative;
+    height: 144px;
+    width: fit-content;
+    min-width: 350px;
+    margin: 60px auto 0;
   }
   #contact a {
     float: left;
