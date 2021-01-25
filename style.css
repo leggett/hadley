@@ -283,8 +283,12 @@ html.scrolled #contact:hover {
   }
 
   /* HEADER */
-  #header {
+  html:not(.new) #header {
     height: var(--app-height);
+    padding-bottom: 5em;
+    box-sizing: border-box;
+  }
+  html.new #header {
     padding-bottom: 5em;
     box-sizing: border-box;
   }
@@ -307,13 +311,19 @@ html.scrolled #contact:hover {
   html.scrolled #content {
     opacity: 0.99; /* Safari bugs out if it is 1 */
   }
+  html.new #content {
+    opacity: 1 !important;
+    margin-top: 0px;
+    padding-top: 250px;
+    background-color: #fff;
+  }
   #content .p {
     text-align: left !important;
   }
   #content .p.open::first-letter {
     font-size: 20rem;
   }
-  #content::before {
+  html:not(.new) #content::before {
     left: calc(50vw - 48px);
     margin-top: -70px;
     width: 96px;
