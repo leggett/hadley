@@ -217,6 +217,11 @@ a[target]:not(.button) {
   #header.mobile {
     display: block;
     padding-top: 200px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  #header.mobile h3 a {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   }
   #header.desktop {
     display: none;
