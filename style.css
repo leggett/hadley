@@ -1,5 +1,5 @@
 :root {
-  --color-accent: #fca;
+  --color-accent: #5b3c7f; /*#fca;*/
   --color-links: #007;
   --color-links-underline: rgba(0, 0, 120, 0.2);
   --font-serif: "Times New Roman", Georgia, serif;
@@ -145,11 +145,7 @@ a[target]:not(.button) {
   margin-top: 150px;
 }
 #footer .quote {
-  background: linear-gradient(
-    180deg,
-    var(--color-accent) 60%,
-    rgba(245, 245, 245, 0) 100%
-  );
+  background: linear-gradient(180deg, var(--color-accent) 60%, rgba(245, 245, 245, 0) 100%);
   width: 100vw;
   min-height: 200px;
 }
