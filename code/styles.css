@@ -3879,6 +3879,29 @@ article.text-left p {
   }
 }
 
+/* Contact form */
+.contact .msg {
+  font-weight: bold;
+  line-height: 48px;
+  display: none;
+}
+.contact .error {
+  color: red;
+}
+.contact.failed .error {
+  display: list-item;
+}
+.contact .confirmation {
+  color: green;
+}
+.contact.success .confirmation {
+  display: list-item;
+}
+.contact.success input[type="submit"] {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 /* Footer */
 
 #footer {

@@ -95,14 +95,22 @@ const Email = {
   },
 };
 
-function sendEmail(messageBody, sender) {
+function sendEmail(senderName, senderEmail, messageBody) {
   Email.send({
-    SecureToken: "372524628E6B6342B12874D13A5F5C743046",
+    SecureToken: "bef19497-1bf0-4ddf-916d-89c7b576e916",
     To: "hi@hadley.ink",
     From: "hi@hadley.ink",
-    Subject: "Message from hadley.ink",
+    Subject: `Message from ${senderName}`,
     Body: messageBody,
-  }).then((message) => alert(message));
+  }).then((message) => {
+    if (message === "OK") {
+      document.querySelector("form.contact").classList.remove("failed");
+      document.querySelector("form.contact").classList.add("success");
+    } else {
+      document.querySelector("form.contact").classList.add("failed");
+      console.error(message);
+    }
+  });
 }
 
 // INITIALIZE APP -- CALLED ON PAGE LOAD
@@ -172,9 +180,16 @@ const initialize = () => {
 
   sendButton.addEventListener("click", (e) => {
     e.preventDefault();
+
+    // Don't send the message again if it was just sent
+    if (document.querySelector("form.contact").classList.contains("success")) return;
+
+    let senderName = document.querySelector("#name").value;
+    let senderEmail = document.querySelector("#email").value;
     let message = document.querySelector("#message").value;
-    let sender = document.querySelector("#email").value;
-    sendEmail(message, sender);
+    let encodedMessage = encodeURIComponent(`\n\n--\n${senderName} ${senderEmail} wrote:\n${message}`);
+    let messageBody = `${senderName} (${senderEmail}) sent you a message via hadley.ink<br><br>${message}<br><br><a href="mailto:${senderEmail}?body=${encodedMessage}">Reply to ${senderName}</a>`;
+    sendEmail(senderName, senderEmail, messageBody);
   });
 };
 window.addEventListener("load", initialize);
