@@ -1,12 +1,21 @@
 let nav, navLinks, navMobileButton, navMobileClose, navMain, wrapper, intro, header, sendButton;
 
-const navItems = [
-  { name: "Novel", link: "/", target: "" },
-  { name: "About", link: "/about", target: "" },
-  { name: "Other writing", link: "/writing", target: "" },
-  { name: "Contact", link: "/contact", target: "" },
-  { name: "Newsletter", link: "https://hadleyleggett.substack.com/?no_cover=true", target: "_new" },
-];
+const navItems =
+  location.href === "https://hadley.ink/"
+    ? [
+        { name: "Novel", link: "/", target: "" },
+        { name: "About", link: "/about", target: "" },
+        { name: "Other writing", link: "/writing", target: "" },
+        { name: "Contact", link: "/contact", target: "" },
+        { name: "Newsletter", link: "https://hadleyleggett.substack.com/?no_cover=true", target: "_new" },
+      ]
+    : [
+        { name: "Novel", link: "index.html", target: "" },
+        { name: "About", link: "about.html", target: "" },
+        { name: "Other writing", link: "writing.html", target: "" },
+        { name: "Contact", link: "contact.html", target: "" },
+        { name: "Newsletter", link: "https://hadleyleggett.substack.com/?no_cover=true", target: "_new" },
+      ];
 
 // UTILITIES
 const make = (selector, ...args) => {
