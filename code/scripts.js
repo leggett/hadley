@@ -43,15 +43,27 @@ const make = (selector, ...args) => {
   return node;
 };
 
-const openMobileNav = () => {
+const cleanUrl = () => {
+  const url = new URL(location);
+  if (url.hash === "#navPanel") {
+    url.hash = "";
+    history.pushState({}, "", url);
+  }
+};
+
+const openMobileNav = (e = false) => {
+  if (e) e.preventDefault;
   document.body.classList.add("is-navPanel-visible");
   setTimeout(() => {
     wrapper.addEventListener("click", closeMobileNav);
+    cleanUrl();
   }, 50);
 };
-const closeMobileNav = () => {
+const closeMobileNav = (e = false) => {
+  if (e) e.preventDefault;
   document.body.classList.remove("is-navPanel-visible");
   wrapper.removeEventListener("click", closeMobileNav);
+  setTimeout(cleanUrl, 50);
 };
 
 // EMAIL - SmtpJS.com - v3.0.0
@@ -149,8 +161,12 @@ const initialize = () => {
   // document.querySelector("#wrapper").addEventListener("click", closeMobileNav);
 
   // Initialize click handlers
-  navMobileButton.addEventListener("click", openMobileNav);
-  navMobileClose.addEventListener("click", closeMobileNav);
+  navMobileButton.addEventListener("click", (e) => {
+    openMobileNav(e);
+  });
+  navMobileClose.addEventListener("click", (e) => {
+    closeMobileNav(e);
+  });
 
   // Change style of mobile nav button when page is scrolled
   const mobileNavButtonObserver = new IntersectionObserver(
