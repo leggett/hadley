@@ -4403,6 +4403,12 @@ article.text-left p {
   }
 }
 
+@media screen and (orientation: portrait) {
+  #copyright {
+    display: none;
+  }
+}
+
 /* Nav Panel */
 
 #navPanelToggle {
