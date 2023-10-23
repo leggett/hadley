@@ -1,7 +1,7 @@
 let nav, navLinks, navMobileButton, navMobileClose, navMain, wrapper, intro, header, sendButton;
 
 const navItems =
-  location.href === "https://hadley.ink/"
+  location.host === "hadley.ink"
     ? [
         { name: "Novel", link: "/", target: "" },
         { name: "About", link: "/about", target: "" },
