@@ -3274,7 +3274,7 @@ body.is-preload #wrapper.fade-in:before {
 
 @media screen and (max-width: 980px) and (orientation: portrait) {
   #wrapper > .bg {
-    background-position: top 0px right -25px;
+    background-position: top 0px right -75px;
   }
 }
 
@@ -4421,7 +4421,7 @@ article.text-left p {
   border: 0;
   color: #ffffff;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 0.075em;
   padding: 0.375rem 1.25rem;
@@ -4465,7 +4465,7 @@ article.text-left p {
 
 @media screen and (max-width: 736px) {
   #navPanelToggle {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     padding: 0.25rem 1rem;
   }
 }
