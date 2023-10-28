@@ -3788,6 +3788,9 @@
 .fa-thumbtack:before {
   content: "\f08d";
 }
+.fa-threads:before {
+  content: "\e618";
+}
 .fa-ticket-alt:before {
   content: "\f3ff";
 }
