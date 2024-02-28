@@ -182,7 +182,8 @@ html {
 }
 
 body {
-  background-color: #1e252d;
+  /* background-color: #1e252d; */
+  background-color: #097a93;
 }
 
 body.is-preload *,
@@ -3235,15 +3236,20 @@ table.alt tbody tr td {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #097a93;
+  /* For Hadley BG
   background-color: #212931;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../images/backgrounds/hadley-1.jpg");
-
-  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/hadley-1.jpg");
   background-position: top right;
-
   background-repeat: repeat, no-repeat, no-repeat;
+  background-size: cover; 
   background-attachment: scroll, scroll, scroll;
+  */
+  background-image: url("../images/backgrounds/soymilk-3.png");
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   z-index: -1;
 }
 
@@ -3256,8 +3262,9 @@ table.alt tbody tr td {
 #wrapper.fade-in:before {
   pointer-events: none;
   transition: opacity 1s ease-in-out;
-  transition-delay: 0.75s;
-  background: #1e252d;
+  transition-delay: 0.3s;
+  background: #097a93;
+  /* background: #1e252d; */
   content: "";
   display: block;
   height: 100%;
@@ -3272,11 +3279,13 @@ body.is-preload #wrapper.fade-in:before {
   opacity: 1;
 }
 
+/* For Hadley BG
 @media screen and (max-width: 980px) and (orientation: portrait) {
   #wrapper > .bg {
     background-position: top 0px right -75px;
   }
 }
+*/
 
 /* Intro */
 
@@ -3296,6 +3305,100 @@ body.is-preload #wrapper.fade-in:before {
   max-width: 72rem;
   margin: 0 auto;
 }
+
+#intro.bookCover {
+  padding: 4rem 0 8rem 0;
+  min-height: fit-content;
+}
+
+#intro.bookCover #bookQuotes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#intro.bookCover img {
+  max-width: 100%;
+}
+#book,
+#quotes {
+  display: flex;
+  width: 50%;
+  max-width: 50%;
+}
+@media screen and (max-width: 1280px) {
+  #book {
+    width: 40%;
+    max-width: 40%;
+  }
+  #quotes {
+    width: 60%;
+    max-width: 60%;
+  }
+}
+#quotes {
+  flex-direction: column;
+  padding: 96px 0 0 96px;
+}
+#quote {
+  text-indent: -0.6em;
+  font-size: 2rem;
+  line-height: 1.4em;
+  font-weight: bold;
+}
+#quoteBy {
+  padding-top: 24px;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+#quotePagination {
+  font-size: 2rem;
+  line-height: 0px;
+  margin: 36px 0 72px;
+}
+@media screen and (max-width: 76rem) {
+  #intro.bookCover {
+    margin: 0 2rem;
+  }
+  #intro.bookCover #bookQuotes {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 980px) and (orientation: portrait) {
+  #intro.bookCover #bookQuotes {
+    flex-direction: column;
+  }
+  #book,
+  #quotes {
+    width: 100%;
+    max-width: 100%;
+  }
+  #book {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  #quotes {
+    padding: 0 24px 0 24px;
+  }
+  #quote {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  #quoteBy {
+    font-size: 15px;
+  }
+}
+
+/* 
+#intro.bookCover img {
+  max-width: 50%;
+}
+@media screen and (max-width: 980px) and (orientation: portrait) {
+  #intro.bookCover img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+*/
 
 #intro input,
 #intro select,
@@ -3352,6 +3455,35 @@ body.is-preload #wrapper.fade-in:before {
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#intro .button.large {
+  background-color: #fde017;
+  box-shadow: none;
+  color: #0e4a53 !important;
+  font-size: 32px;
+  font-family: Merriweather, Georgia, serif;
+  text-transform: none;
+  height: fit-content;
+  line-height: 32px;
+  padding: 1.5rem 1rem 1rem;
+  border-radius: 4px;
+  letter-spacing: 0;
+}
+#intro .button.large div {
+  font-size: 18px;
+  font-weight: normal;
+  opacity: 0.7;
+  padding-top: 4px;
+}
+#intro .button.large:hover {
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.7);
+  color: #000 !important;
+}
+@media screen and (max-width: 980px) and (orientation: portrait) {
+  #intro .button.large {
+    font-size: 28px;
+  }
 }
 
 #intro input[type="submit"]:hover,
@@ -3418,12 +3550,12 @@ body.is-preload #wrapper.fade-in:before {
 }
 
 body.is-preload #intro {
-  transform: translateY(2rem);
+  /* Hadley BG: transform: translateY(2rem); */
   opacity: 0;
 }
 
 body.is-preload #intro:not(.hidden) + #header + #nav {
-  transform: translateY(4rem);
+  /* Hadley BG: transform: translateY(4rem); */
   opacity: 0;
 }
 
@@ -3462,6 +3594,52 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   #intro .actions {
     display: none;
   }
+}
+
+/* Carousel */
+.carousel {
+  /* 
+  overflow-y: hidden;
+  overflow-x: visible; 
+  */
+  position: relative;
+  min-height: 280px;
+}
+.carousel .quote {
+  position: absolute;
+  top: -5000px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel .quote.active {
+  top: 0;
+  opacity: 1;
+  /* display: block; */
+  transition: opacity 1s ease-in-out;
+}
+
+/* 
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+*/
+
+.dot {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 0 8px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #fff;
 }
 
 /* Header */
@@ -3570,7 +3748,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #ffffff;
   display: flex;
   transition: transform 1s ease, opacity 1s ease;
-  background: rgba(255, 255, 255, 0.175);
+  /* background: rgba(255, 255, 255, 0.175); */
+  background: rgba(255, 255, 255, 0.3);
   height: 4rem;
   line-height: 4rem;
   margin: -4rem auto 0 auto;
@@ -3792,6 +3971,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: 50%;
 }
 
+#main > .posts.grid3 > * {
+  width: 33%;
+}
+
 #main > .posts > article {
   border-color: #eeeeee;
   border-left-width: 2px;
@@ -3817,6 +4000,10 @@ article.text-left p {
   border-top-width: 0;
 }
 
+#main > .posts.grid3 > article {
+  border-width: 0;
+}
+
 @media screen and (max-width: 980px) {
   #main > .posts > * {
     width: 50%;
@@ -3824,6 +4011,10 @@ article.text-left p {
 
   #main > .posts > * {
     padding: 2.5rem;
+    width: 50%;
+  }
+
+  #main > .posts.grid3 > * {
     width: 50%;
   }
 }
