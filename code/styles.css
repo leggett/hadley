@@ -3353,7 +3353,7 @@ body.is-preload #wrapper.fade-in:before {
 #quotePagination {
   font-size: 2rem;
   line-height: 0px;
-  margin: 36px 0 72px;
+  margin: 36px 0;
 }
 @media screen and (max-width: 76rem) {
   #intro.bookCover {
@@ -3380,8 +3380,8 @@ body.is-preload #wrapper.fade-in:before {
     padding: 0 24px 0 24px;
   }
   #quote {
-    font-size: 2.4rem;
-    line-height: 3rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
   #quoteBy {
     font-size: 15px;
@@ -3482,7 +3482,10 @@ body.is-preload #wrapper.fade-in:before {
 }
 @media screen and (max-width: 980px) and (orientation: portrait) {
   #intro .button.large {
-    font-size: 28px;
+    font-size: 22px;
+  }
+  #intro .button.large div {
+    font-size: 16px;
   }
 }
 
@@ -3619,18 +3622,17 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   transition: opacity 1s ease-in-out;
 }
 
-/* 
-.carousel-dots {
-  text-align: center;
-  margin-top: 20px;
+@media screen and (max-width: 980px) and (orientation: portrait) {
+  .carousel {
+    min-height: 320px;
+  }
 }
-*/
 
 .dot {
   cursor: pointer;
   height: 14px;
   width: 14px;
-  margin: 0 8px;
+  margin: 0 8px 24px 8px;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 50%;
@@ -3640,6 +3642,17 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 .dot.active {
   background-color: #fff;
+}
+
+@media screen and (max-width: 980px) and (orientation: portrait) {
+  .carousel {
+    min-height: 320px;
+  }
+  .dot {
+    height: 18px;
+    width: 18px;
+    margin: 0 12px 24px 12px;
+  }
 }
 
 /* Header */
