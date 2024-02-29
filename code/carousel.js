@@ -29,5 +29,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Automatically switch to the next quote every 3 seconds
-  interval = setInterval(nextQuote, 6000);
+  interval = setInterval(nextQuote, 4000);
 });
