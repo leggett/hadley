@@ -3308,7 +3308,7 @@ body.is-preload #wrapper.fade-in:before {
 
 #intro.bookCover {
   padding: 4rem 0 8rem 0;
-  min-height: fit-content;
+  min-height: auto;
 }
 
 #intro.bookCover #bookQuotes {
@@ -3625,6 +3625,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 @media screen and (max-width: 980px) and (orientation: portrait) {
   .carousel {
     min-height: 320px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .carousel {
+    min-height: 400px;
   }
 }
 
