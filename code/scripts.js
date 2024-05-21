@@ -1,5 +1,6 @@
 let nav, navLinks, navMobileButton, navMobileClose, navMain, wrapper, intro, header, sendButton;
 
+// https://hadleyleggett.substack.com/?no_cover=true
 const navItems =
   location.host === "hadley.ink"
     ? [
@@ -7,14 +8,14 @@ const navItems =
         { name: "About Hadley", link: "/about", target: "" },
         { name: "Other writing", link: "/writing", target: "" },
         { name: "Contact", link: "/contact", target: "" },
-        { name: "Newsletter", link: "https://hadleyleggett.substack.com/?no_cover=true", target: "_new" },
+        { name: "Newsletter", link: "https://writingchat.substack.com", target: "_new" },
       ]
     : [
         { name: "The Novel", link: "index.html", target: "" },
         { name: "About Hadley", link: "about.html", target: "" },
         { name: "Other writing", link: "writing.html", target: "" },
         { name: "Contact", link: "contact.html", target: "" },
-        { name: "Newsletter", link: "https://hadleyleggett.substack.com/?no_cover=true", target: "_new" },
+        { name: "Newsletter", link: "https://writingchat.substack.com", target: "_new" },
       ];
 
 // UTILITIES
