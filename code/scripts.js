@@ -5,15 +5,17 @@ const navItems =
   location.host === "hadley.ink"
     ? [
         { name: "The Novel", link: "/", target: "" },
+        { name: "Events", link: "/events", target: "" },
         { name: "About Hadley", link: "/about", target: "" },
-        { name: "Other writing", link: "/writing", target: "" },
+        // { name: "Other writing", link: "/writing", target: "" },
         { name: "Contact", link: "/contact", target: "" },
         { name: "Newsletter", link: "https://writingchat.substack.com", target: "_new" },
       ]
     : [
         { name: "The Novel", link: "index.html", target: "" },
+        { name: "Events", link: "events.html", target: "" },
         { name: "About Hadley", link: "about.html", target: "" },
-        { name: "Other writing", link: "writing.html", target: "" },
+        // { name: "Other writing", link: "writing.html", target: "" },
         { name: "Contact", link: "contact.html", target: "" },
         { name: "Newsletter", link: "https://writingchat.substack.com", target: "_new" },
       ];

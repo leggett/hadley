@@ -3317,7 +3317,7 @@ body.is-preload #wrapper.fade-in:before {
   width: 100%;
 }
 #intro.bookCover img {
-  max-width: 100%;
+  max-width: 95%;
 }
 #book,
 #quotes {
