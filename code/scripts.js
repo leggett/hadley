@@ -120,6 +120,12 @@ const Email = {
 };
 
 function sendEmail(senderName, senderEmail, messageBody) {
+  // Try to catch bots, see if they filled out this field
+  if (document.querySelector("form #company").value !== "") {
+    document.querySelector("form.contact").classList.add("failed");
+    return;
+  }
+
   Email.send({
     SecureToken: "bef19497-1bf0-4ddf-916d-89c7b576e916",
     To: "hi@hadley.ink",

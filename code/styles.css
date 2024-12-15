@@ -2330,6 +2330,11 @@ form > .fields {
   margin: -1.5rem 0 2rem -1.5rem;
 }
 
+/* This is a dummy field meant to catch spam */
+form .field.check {
+  display: none;
+}
+
 form > .fields > .field {
   flex-grow: 0;
   flex-shrink: 0;
