@@ -120,9 +120,11 @@ const Email = {
 };
 
 function sendEmail(senderName, senderEmail, messageBody) {
+  const form = document.querySelector("form.contact");
+
   // Try to catch bots, see if they filled out this field
   if (document.querySelector("form #company").value !== "") {
-    document.querySelector("form.contact").classList.add("failed");
+    form.classList.add("failed");
     return;
   }
 
@@ -134,10 +136,10 @@ function sendEmail(senderName, senderEmail, messageBody) {
     Body: messageBody,
   }).then((message) => {
     if (message === "OK") {
-      document.querySelector("form.contact").classList.remove("failed");
-      document.querySelector("form.contact").classList.add("success");
+      form.classList.remove("failed");
+      form.classList.add("success");
     } else {
-      document.querySelector("form.contact").classList.add("failed");
+      form.classList.add("failed");
       console.error(message);
     }
   });
@@ -221,6 +223,14 @@ const initialize = () => {
     let senderName = document.querySelector("#name").value;
     let senderEmail = document.querySelector("#email").value;
     let message = document.querySelector("#message").value;
+
+    if (message === "" || senderEmail === "" || !/[^@\s]+@[^@\s]+\.[^@\s]+/.test(senderEmail)) {
+      document.querySelector("form.contact").classList.add("failed");
+      return;
+    } else {
+      document.querySelector("form.contact").classList.remove("failed");
+    }
+
     let encodedMessage = encodeURIComponent(`\n\n--\n${senderName} ${senderEmail} wrote:\n${message}`);
     let messageBody = `${senderName} (${senderEmail}) sent you a message via hadley.ink<br><br>${message}<br><br><a href="mailto:${senderEmail}?body=${encodedMessage}">Reply to ${senderName}</a>`;
     sendEmail(senderName, senderEmail, messageBody);
